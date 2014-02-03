@@ -3,12 +3,16 @@ define(function(require) {
 
   var AppComponent = require('jsx!components/app')
   var CardCollection = require('collections/cards')
-  var Lipsum = require('bower_components/ainojs/lipsum')
+  var Lipsum = require('aino/lipsum')
   var React = require('react')
   var Backbone = require('backbone')
   var Router = require('router')
+  var Globals = require('aino/globals')
 
   return function() {
+
+    // register globals
+    Globals.register('masonry', null)
 
     // initialize cards
     var cards = new CardCollection()
@@ -22,8 +26,8 @@ define(function(require) {
     }
 
     // create the top-level react app
-    var App = AppComponent({
-    	cards: cards
+    var App = AppComponent({ 
+      cards: cards
     })
 
     React.renderComponent(App, document.body)
@@ -36,6 +40,7 @@ define(function(require) {
         url: url, 
         urlParams: params || [] 
       })
+
     })
 
     Backbone.history.start()

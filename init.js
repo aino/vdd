@@ -6,7 +6,8 @@ require.config({
     backbone: 'bower_components/backbone/backbone',
     react: 'bower_components/react/react',
     jsx: "lib/jsx",
-    JSXTransformer: 'bower_components/react/JSXTransformer'
+    JSXTransformer: 'bower_components/react/JSXTransformer',
+    aino: 'bower_components/ainojs'
   },
   shim: {
     jquery: {
