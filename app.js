@@ -11,9 +11,6 @@ define(function(require) {
 
   return function() {
 
-    // register globals
-    Globals.register('masonry', null)
-
     // initialize cards
     var cards = new CardCollection()
 
