@@ -41,5 +41,6 @@ define(function(require) {
     })
 
     Backbone.history.start()
+    
   }
 })
