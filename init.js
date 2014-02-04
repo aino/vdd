@@ -25,6 +25,6 @@ require.config({
     }
   }
 })
-require(['app'], function(app) {
-  app()
+require(['index'], function(index) {
+  index()
 })
